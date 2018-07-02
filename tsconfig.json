@@ -13,7 +13,7 @@
     "sourceMap": true,
     "target": "es6",
     "module": "commonjs",
-    "outDir": "./lib/ir/elenoon/botplatform"
+    "outDir": "./lib/ir/bale/botplatform"
   },
   "compileOnSave": true
 }
