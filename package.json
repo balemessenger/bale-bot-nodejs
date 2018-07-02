@@ -1,0 +1,37 @@
+{
+  "name": "balebot",
+  "version": "2.0.5",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha lib --recursive",
+    "build": "tsc"
+  },
+  "author": "support@bale.ai",
+  "license": "ISC",
+  "dependencies": {
+    "@types/request": "0.0.47",
+    "crc-32": "^1.0.2",
+    "gelf": "^1.0.3",
+    "log4js": "^1.0.1",
+    "log4js-syslog-appender": "^0.3.0",
+    "request": "^2.81.0",
+    "ws": "^1.1.1"
+  },
+  "description": "An SDK to help you write nice bots easily for #Bale messenger.",
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/gulp": "^3.8.32",
+    "@types/mocha": "^2.2.38",
+    "@types/node": "^7.0.1",
+    "@types/sinon": "^1.16.34",
+    "@types/typescript": "^2.0.0",
+    "@types/ws": "0.0.37",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-watch": "^4.3.9",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.5",
+    "typescript": "^2.0.0"
+  }
+}
