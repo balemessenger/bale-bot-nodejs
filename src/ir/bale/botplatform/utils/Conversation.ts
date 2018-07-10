@@ -167,6 +167,16 @@ export class Session {
         if (this.currentState >= this.tracer.callbacksNum)
             this.reset();
     }
+                              
+
+    /**
+     * Goes to the previous state
+     */
+    public previous(): void {
+        this._currentState--;
+        if (this.currentState < 0)
+            this.reset();
+    }
 
     /**
      * Resets the session to the first state.
