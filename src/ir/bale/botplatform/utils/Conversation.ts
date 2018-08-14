@@ -160,8 +160,8 @@ export class Session {
     /**
      * Goes to the next state. If reached over the last state, resets.
      */
-    public next(): void {
-        this._currentState++;
+    public next(cnt=1): void {
+        this._currentState = this._currentState + cnt;
 
         //Check if the session state is over, then finish out the session.
         if (this.currentState >= this.tracer.callbacksNum)
