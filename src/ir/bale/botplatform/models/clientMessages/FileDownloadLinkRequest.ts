@@ -12,7 +12,7 @@ export class FileDownloadLinkRequest extends Request {
      *
      * @param fileId
      * @param accessHash
-     * @param version The version of access hash.
+     * @param fileType The version of access hash.
      */
     constructor(fileId: string, accessHash: string,fileType:string) {
         super(ApiConst.Services.Files);

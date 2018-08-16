@@ -172,7 +172,7 @@ export class Session {
     /**
      * Goes to the previous state
      */
-    public previous(cnt): void {
+    public previous(cnt=1): void {
         this._currentState = this._currentState - cnt;
         if (this.currentState < 0)
             this.reset();
