@@ -55,7 +55,7 @@ export class ReconnectingWebSocket {
     }
 
     private connect(reconnectAttempt: any) {
-        this.ws = new WebSocket(this.url, this.protocols);
+        this.ws = new WebSocket(this.url,this.protocols,{headers:{sorce:"nodejs"}});
 
         this.onconnecting();
         if (this.debug || ReconnectingWebSocket.debugAll) {
@@ -73,6 +73,20 @@ export class ReconnectingWebSocket {
         }, this.timeoutInterval);
 
         this.ws.onopen = function (event: any) {
+            const interval = setInterval(function ping() {
+                try {
+                    if (This.ws.isAlive === false) return This.ws.terminate();
+
+                    This.ws.isAlive = false;
+                    This.ws.ping('', false, true);
+                }catch (e){
+                    This.ws = null;
+                    if (This.forcedClose) {
+                        This.readyState = WebSocket.CLOSED;
+                        This.onclose(event);
+                    }
+                }
+            }, 30000);
             clearTimeout(timeout);
             if (This.debug || ReconnectingWebSocket.debugAll) {
                 Logger.debug('ReconnectingWebSocket \t onopen \t' + This.url);
@@ -85,6 +99,8 @@ export class ReconnectingWebSocket {
             }
             This.onopen(event);
         };
+        this.ws.on('pong', () => This.ws.isAlive = true);
+
 
         // The timeout that is set when an error has been occurred. (To check if on close is not called after the error ==> call onclose explicitely.)
         let onErrorTimeout: Timer = null;
