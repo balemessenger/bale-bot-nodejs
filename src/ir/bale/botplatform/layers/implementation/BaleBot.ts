@@ -20,6 +20,9 @@ import {ReceiptMessage} from "../../models/message/ReceiptMessage";
 
 import {FileDownloadLinkRequest} from "../../models/clientMessages/FileDownloadLinkRequest"
 import {FileUploadLinkRequest} from "../../models/clientMessages/FileUploadLinkRequest"
+import {CreateGroupRequest} from "../../models/clientMessages/CreateGroupRequest";
+import {CreateGroup} from "../../models/clientRequests/group/CreateGroup";
+
 const request: any = require('request');
 const crc: any = require('crc-32');
 const https = require('https');
@@ -261,6 +264,10 @@ export class BaleBot {
      */
     get botToken(): string {
         return this._botToken;
+    }
+
+    public createGroup(createGroup: CreateGroup): BalePromises {
+        return this.sendRequest(new CreateGroupRequest(createGroup));
     }
 }
 
