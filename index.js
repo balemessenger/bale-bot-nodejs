@@ -5,6 +5,7 @@
 exports.BaleBot = require("./lib/ir/bale/botplatform/layers/implementation/BaleBot").BaleBot;
 
 /**Message models*/
+exports.JsonMessage = require("./lib/ir/bale/botplatform/models/message/JsonMessage").JsonMessage;
 exports.TextMessage = require("./lib/ir/bale/botplatform/models/message/TextMessage").TextMessage;
 exports.FileMessage = require("./lib/ir/bale/botplatform/models/message/FileMessage").FileMessage;
 exports.PhotoMessage = require("./lib/ir/bale/botplatform/models/message/PhotoMessage").PhotoMessage;
