@@ -14,6 +14,8 @@ exports.AudioMessage = require("./lib/ir/bale/botplatform/models/message/AudioMe
 exports.StickerMessage = require("./lib/ir/bale/botplatform/models/message/StickerMessage").StickerMessage;
 exports.QuotedMessage = require("./lib/ir/bale/botplatform/models/message/QuotedMessage").QuotedMessage;
 exports.ReceiptMessage = require("./lib/ir/bale/botplatform/models/message/ReceiptMessage").ReceiptMessage;
+exports.LocationMessage = require("./lib/ir/bale/botplatform/models/message/LocationMessage").LocationMessage;
+exports.ContactMessage = require("./lib/ir/bale/botplatform/models/message/ContactMessage").ContactMessage;
 // template messages
 exports.TemplateMessage = require("./lib/ir/bale/botplatform/models/message/template/TemplateMessage").TemplateMessage;
 exports.SimpleTemplate = require("./lib/ir/bale/botplatform/models/message/template/SimpleTemplate").SimpleTemplate;
