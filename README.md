@@ -1,4 +1,4 @@
-# Bale bot nodejs SDK
+# Bale bot nodejs SDK (This package is a branch from the main [Bale Bot](https://www.npmjs.com/package/balebot) )
 [![Build Status](https://avatars1.githubusercontent.com/u/35299314?s=200&v=4)](https://github.com/balemessenger)
 
 nodejs SDK and samples for [Bale bot messenger](https://developers.bale.ai).

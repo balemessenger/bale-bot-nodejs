@@ -1,12 +1,12 @@
 {
-  "name": "balebot",
-  "version": "2.0.8",
+  "name": "balebot_plus",
+  "version": "2.1.9",
   "main": "index.js",
   "scripts": {
     "test": "mocha lib --recursive",
     "build": "tsc"
   },
-  "author": "support@bale.ai",
+  "author": "m.ahadi@outlook.com",
   "license": "ISC",
   "dependencies": {
     "@types/request": "0.0.47",
@@ -17,7 +17,7 @@
     "request": "^2.81.0",
     "ws": "^1.1.1"
   },
-  "description": "An SDK to help you write nice bots easily for #Bale messenger.",
+  "description": "An SDK to help you write nice bots easily for #Bale messenger. This package is a branch from the main Bale Bot",
   "devDependencies": {
     "@types/chai": "^3.4.34",
     "@types/gulp": "^3.8.32",
