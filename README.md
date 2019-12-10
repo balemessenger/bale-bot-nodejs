@@ -1,3 +1,5 @@
+# DEPRECATED 
+# plese visit [developer's guid](https://dev.bale.ai)
 # Bale bot nodejs SDK
 [![Build Status](https://avatars1.githubusercontent.com/u/35299314?s=200&v=4)](https://github.com/balemessenger)
 
